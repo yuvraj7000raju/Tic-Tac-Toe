@@ -2,22 +2,38 @@
     margin: 0;
     padding: 0;
 }
+body{
+    height: -100%;
+    width: -100%;
+}
+.container{
+    background-color: blanchedalmond;
+    align-content: center;
+    text-align: center;
+    /* justify-content: center;
+    align-items: center; */
+}
+
 .score{
     height: 20vh;
+    width: 100%;
     background-color: beige;
+    justify-content: center;
+
 }
 .play{
     display: grid;
     height: 55vh;
+    width: 55vh;
     overflow: hidden;
     grid-template-rows: auto auto auto; 
     grid-template-columns: auto auto auto;
     grid-row-gap: 20px;
     padding: 20px;
-    align-items: center;
+    /* align-items: center; */
     background-color: rgb(158, 232, 238);
-    margin-left: 450px;
-    margin-right: 450px;
+    /* margin-left: 450px;
+    margin-right: 450px; */
 }
 .b{
     height: 15vh;
@@ -30,5 +46,6 @@ img{
     width: 100%;
 }
 .winner{
-    height :10vh;
+    height :20vh;
+    background-color: brown;
 }

@@ -60,11 +60,19 @@ function addimage(m, n, row) {
         if(length == true){
             let boss = (p ==0) ? "0" : "x" ;
             console.log("!!!",boss, " is winner !!!")
+            end.style.backgroundColor="red";
+            end.innerText = `winner is ${boss}`
         }
+        if(result.length==9 && length==false){
+            end.innerText = "match is draw";
+        }
+        end.style.textAlign ="center";
+        end.style.fontSize ="30px"
     }
     
 }
 let p = 0
+let end = document.getElementById("winner")
 // winner.style.backgroundColor = "blue";
 let arr = [11, 12, 13, 14, 15, 16, 17, 18, 19]
 let rows = [1,1,1,1,1,1,1,1,1]
@@ -89,3 +97,16 @@ a23.addEventListener("click", addimage(a23, 6, 2))
 a31.addEventListener("click", addimage(a31, 7, 3))
 a32.addEventListener("click", addimage(a32, 8, 3))
 a33.addEventListener("click", addimage(a33, 9, 3))
+
+let gr =document.getElementById("ground")
+let w = document.getElementsByTagName("body")
+[0].clientWidth
+let r = w - document.getElementById("ground").clientWidth
+let m = String(r/2)+"px"
+console.log("r is equal to",r)
+document.getElementById("ground").style.marginLeft = m
+
+if(document.getElementsByTagName("body")[0].clientWidth < document.getElementsByTagName("body")[0].clientHeight){
+ gr.style.height = w
+ gr.style.width = w
+}
