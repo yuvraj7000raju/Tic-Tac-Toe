@@ -107,6 +107,7 @@ console.log("r is equal to",r)
 document.getElementById("ground").style.marginLeft = m
 
 if(document.getElementsByTagName("body")[0].clientWidth < document.getElementsByTagName("body")[0].clientHeight){
+let w = document.getElementsByTagName("body")
  gr.style.height = w
  gr.style.width = w
 }
